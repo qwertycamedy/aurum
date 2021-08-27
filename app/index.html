@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurum</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+
+<body>
+  <svg display='none'>
+
+    <symbol id='bannerVk' viewBox="0 0 27 29">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M25.5604 7.89355C25.7481 7.2888 25.5604 6.84917 24.7298 6.84917H21.9681C21.2715 6.84917 20.9498 7.23411 20.7621 7.64586C20.7621 7.64586 19.3414 11.1629 17.3575 13.4431C16.7142 14.1025 16.4194 14.3223 16.0708 14.3223C15.8831 14.3223 15.6415 14.1025 15.6415 13.4983V7.86514C15.6415 7.15101 15.4274 6.82129 14.8373 6.82129H10.4941C10.0649 6.82129 9.79699 7.15101 9.79699 7.48073C9.79699 8.16752 10.7889 8.33265 10.896 10.2558V14.4344C10.896 15.341 10.7378 15.5066 10.3866 15.5066C9.44842 15.5066 7.16977 11.9623 5.80289 7.92358C5.53711 7.12367 5.26711 6.82129 4.56996 6.82129H1.78189C0.977695 6.82129 0.84375 7.2057 0.84375 7.61798C0.84375 8.35999 1.78189 12.0963 5.21332 17.0416C7.49197 20.4192 10.7357 22.2346 13.6577 22.2346C15.4274 22.2346 15.6415 21.8223 15.6415 21.1355V18.5803C15.6415 17.7563 15.8024 17.619 16.3656 17.619C16.7674 17.619 17.4915 17.8383 19.1268 19.4595C21.003 21.3827 21.3247 22.2619 22.3704 22.2619H25.1316C25.9358 22.2619 26.3113 21.8496 26.0967 21.0529C25.8557 20.2562 24.9439 19.1025 23.7642 17.7289C23.1209 16.9601 22.1558 16.1082 21.861 15.6959C21.4592 15.1464 21.5662 14.9265 21.861 14.4322C21.8341 14.4322 25.2123 9.54163 25.5604 7.89141" />
+      </g>
+    </symbol>
+
+    <symbol id='bannerInsta' viewBox="0 0 27 28">
+      <g>
+        <path
+          d="M18.4217 4.01701C19.726 4.02097 20.9757 4.54947 21.8979 5.4871C22.8202 6.42472 23.34 7.69528 23.3439 9.02127V19.0287C23.34 20.3547 22.8202 21.6253 21.8979 22.5629C20.9757 23.5005 19.726 24.029 18.4217 24.033H8.5783C7.27404 24.029 6.02432 23.5005 5.10206 22.5629C4.17981 21.6253 3.65997 20.3547 3.65607 19.0287V9.02127C3.65997 7.69528 4.17981 6.42472 5.10206 5.4871C6.02432 4.54947 7.27404 4.02097 8.5783 4.01701H18.4217ZM18.4217 2.01562H8.5783C4.78828 2.01563 1.6875 5.16809 1.6875 9.02127V19.0287C1.6875 22.8819 4.78828 26.0344 8.5783 26.0344H18.4217C22.2117 26.0344 25.3125 22.8819 25.3125 19.0287V9.02127C25.3125 5.16809 22.2117 2.01562 18.4217 2.01562Z" />
+        <path
+          d="M19.8983 9.0209C19.6062 9.0209 19.3208 8.93286 19.0779 8.76791C18.8351 8.60296 18.6459 8.3685 18.5341 8.0942C18.4223 7.8199 18.3931 7.51806 18.4501 7.22686C18.507 6.93566 18.6477 6.66818 18.8542 6.45824C19.0607 6.2483 19.3238 6.10532 19.6102 6.0474C19.8966 5.98948 20.1935 6.01921 20.4633 6.13283C20.7331 6.24645 20.9637 6.43885 21.126 6.68572C21.2882 6.93259 21.3748 7.22282 21.3748 7.51973C21.3752 7.71698 21.3373 7.91238 21.2633 8.0947C21.1892 8.27702 21.0805 8.44268 20.9433 8.58216C20.8061 8.72164 20.6431 8.8322 20.4638 8.90749C20.2845 8.98278 20.0923 9.02132 19.8983 9.0209ZM13.5 10.0213C14.2788 10.0213 15.0401 10.2561 15.6877 10.696C16.3352 11.1359 16.8399 11.7611 17.1379 12.4926C17.436 13.2241 17.514 14.0291 17.362 14.8056C17.2101 15.5822 16.8351 16.2955 16.2844 16.8554C15.7337 17.4153 15.032 17.7965 14.2682 17.951C13.5044 18.1055 12.7126 18.0262 11.9931 17.7232C11.2736 17.4202 10.6586 16.9071 10.2259 16.2487C9.79327 15.5904 9.56233 14.8164 9.56233 14.0246C9.56344 12.9632 9.97866 11.9456 10.7169 11.1951C11.4551 10.4446 12.456 10.0225 13.5 10.0213ZM13.5 8.01994C12.3319 8.01994 11.1899 8.37211 10.2187 9.03191C9.24739 9.69172 8.49037 10.6295 8.04334 11.7267C7.59631 12.8239 7.47935 14.0313 7.70724 15.1961C7.93513 16.3609 8.49765 17.4308 9.32365 18.2706C10.1497 19.1104 11.202 19.6822 12.3478 19.9139C13.4935 20.1456 14.681 20.0267 15.7602 19.5722C16.8395 19.1178 17.7619 18.3481 18.4109 17.3607C19.0599 16.3732 19.4063 15.2122 19.4063 14.0246C19.4063 12.4321 18.784 10.9048 17.6764 9.77867C16.5687 8.65258 15.0664 8.01994 13.5 8.01994Z" />
+      </g>
+    </symbol>
+
+    <symbol id='bannerYt' viewBox="0 0 25 27">
+      <g clip-path="url(#clip0)">
+        <path
+          d="M24.8359 8.1691C24.8359 5.93521 23.2197 4.13818 21.2226 4.13818C18.5176 4.0096 15.7588 3.95996 12.9394 3.95996H12.0605C9.24804 3.95996 6.48437 4.0096 3.77929 4.13867C1.7871 4.13867 0.17089 5.94564 0.17089 8.17952C0.0488199 9.94628 -0.00293794 11.7135 -8.24808e-06 13.4808C-0.00489106 15.248 0.0504475 17.0169 0.166007 18.7875C0.166007 21.0214 1.78222 22.8333 3.77441 22.8333C6.6162 22.9674 9.53124 23.0269 12.4951 23.022C15.4639 23.0319 18.3708 22.969 21.2158 22.8333C23.2129 22.8333 24.8291 21.0214 24.8291 18.7875C24.9463 17.0153 25 15.248 24.9951 13.4758C25.0062 11.7086 24.9531 9.93966 24.8359 8.1691ZM10.1074 18.3507V8.59602L17.1875 13.4709L10.1074 18.3507Z" />
+      </g>
+      <defs>
+        <clipPath id="clip0">
+          <rect width="25" height="25.4167" transform="translate(0 0.783203)" />
+        </clipPath>
+      </defs>
+    </symbol>
+
+    <symbol id='bannerArrow' viewBox="0 0 16 109">
+      <g>
+        <path
+          d="M7.29289 107.865C7.68342 108.255 8.31658 108.255 8.70711 107.865L15.0711 101.501C15.4616 101.11 15.4616 100.477 15.0711 100.087C14.6805 99.6961 14.0474 99.6961 13.6569 100.087L8 105.743L2.34315 100.087C1.95262 99.6961 1.31946 99.6961 0.928932 100.087C0.538408 100.477 0.538408 101.11 0.928932 101.501L7.29289 107.865ZM7 0.916016V107.158H9V0.916016H7Z" />
+      </g>
+    </symbol>
+
+    <symbol id='socialVk' viewBox="0 0 38 38">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M35.9738 9.79688C36.2381 8.95969 35.9738 8.35109 34.8049 8.35109H30.918C29.9376 8.35109 29.4849 8.88398 29.2207 9.45398C29.2207 9.45398 27.2212 14.3227 24.4291 17.4793C23.5236 18.3921 23.1088 18.6964 22.6182 18.6964C22.3539 18.6964 22.014 18.3921 22.014 17.5557V9.75754C22.014 8.76895 21.7127 8.3125 20.8822 8.3125H14.7695C14.1654 8.3125 13.7884 8.76895 13.7884 9.22539C13.7884 10.1761 15.1844 10.4047 15.3351 13.067V18.8516C15.3351 20.1066 15.1124 20.3359 14.6181 20.3359C13.2978 20.3359 10.0908 15.4293 8.16703 9.83844C7.79297 8.73109 7.41297 8.3125 6.4318 8.3125H2.50785C1.37602 8.3125 1.1875 8.84465 1.1875 9.41539C1.1875 10.4426 2.50785 15.6149 7.33727 22.4608C10.5443 27.1366 15.1095 29.6496 19.2219 29.6496C21.7127 29.6496 22.014 29.0789 22.014 28.1282V24.5909C22.014 23.4502 22.2404 23.2602 23.033 23.2602C23.5986 23.2602 24.6176 23.5637 26.9191 25.8081C29.5598 28.4703 30.0126 29.6875 31.4843 29.6875H35.3704C36.5023 29.6875 37.0307 29.1168 36.7286 28.0139C36.3895 26.911 35.1062 25.3138 33.4459 23.4123C32.5405 22.348 31.1823 21.1687 30.7674 20.5979C30.2018 19.8372 30.3525 19.5329 30.7674 18.8486C30.7295 18.8486 35.484 12.0784 35.9738 9.79391" />
+      </g>
+    </symbol>
+
+    <symbol id='socialYt' viewBox="0 0 37 37">
+      <g>
+        <path
+          d="M36.7577 10.7524C36.7577 7.50045 34.3657 4.88443 31.4101 4.88443C27.4065 4.69727 23.3235 4.625 19.1509 4.625H17.8501C13.6876 4.625 9.59741 4.69727 5.59389 4.88516C2.64545 4.88516 0.253461 7.51562 0.253461 10.7676C0.0727966 13.3395 -0.00380493 15.9122 0.000531006 18.4848C-0.00669556 21.0575 0.0752055 23.6325 0.246234 26.21C0.246234 29.462 2.63823 32.0997 5.58666 32.0997C9.79252 32.2948 14.1068 32.3815 18.4933 32.3743C22.8871 32.3887 27.1893 32.2972 31.3999 32.0997C34.3556 32.0997 36.7476 29.462 36.7476 26.21C36.921 23.6301 37.0005 21.0575 36.9933 18.4776C37.0097 15.9049 36.9312 13.3299 36.7577 10.7524ZM14.9595 25.5741V11.3739L25.438 18.4704L14.9595 25.5741Z" />
+      </g>
+    </symbol>
+    <symbol id='socialInsta' viewBox="0 0 36 36">
+      <g>
+        <path
+          d="M21.1641 18C21.1641 19.7474 19.7474 21.1641 18 21.1641C16.2526 21.1641 14.8359 19.7474 14.8359 18C14.8359 16.2526 16.2526 14.8359 18 14.8359C19.7474 14.8359 21.1641 16.2526 21.1641 18Z" />
+        <path
+          d="M23.3438 8.4375H12.6562C10.3299 8.4375 8.4375 10.3299 8.4375 12.6562V23.3438C8.4375 25.6701 10.3299 27.5625 12.6562 27.5625H23.3438C25.6701 27.5625 27.5625 25.6701 27.5625 23.3438V12.6562C27.5625 10.3299 25.6701 8.4375 23.3438 8.4375ZM18 23.2734C15.0922 23.2734 12.7266 20.9078 12.7266 18C12.7266 15.0922 15.0922 12.7266 18 12.7266C20.9078 12.7266 23.2734 15.0922 23.2734 18C23.2734 20.9078 20.9078 23.2734 18 23.2734ZM24.0469 13.0078C23.4643 13.0078 22.9922 12.5357 22.9922 11.9531C22.9922 11.3706 23.4643 10.8984 24.0469 10.8984C24.6294 10.8984 25.1016 11.3706 25.1016 11.9531C25.1016 12.5357 24.6294 13.0078 24.0469 13.0078Z" />
+        <path
+          d="M26.5078 0H9.49219C4.2583 0 0 4.2583 0 9.49219V26.5078C0 31.7417 4.2583 36 9.49219 36H26.5078C31.7417 36 36 31.7417 36 26.5078V9.49219C36 4.2583 31.7417 0 26.5078 0ZM29.6719 23.3438C29.6719 26.833 26.833 29.6719 23.3438 29.6719H12.6562C9.16699 29.6719 6.32812 26.833 6.32812 23.3438V12.6562C6.32812 9.16699 9.16699 6.32812 12.6562 6.32812H23.3438C26.833 6.32812 29.6719 9.16699 29.6719 12.6562V23.3438Z" />
+      </g>
+    </symbol>
+
+    <symbol id='reserveOne' viewBox="0 0 82 74">
+      <g>
+        <circle cx="40.5732" cy="36.5" r="20.5" />
+        <ellipse cx="68.0864" cy="60.141" rx="7.5" ry="11" transform="rotate(-43.5201 68.0864 60.141)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(0.725133 0.688609 0.688609 -0.725133 68.0864 13.1412)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(-0.725133 -0.688609 -0.688609 0.725133 15.0864 60.141)" />
+        <ellipse cx="13.0864" cy="13.1412" rx="7.5" ry="11" transform="rotate(136.48 13.0864 13.1412)" />
+      </g>
+    </symbol>
+    <symbol id='reserveTwo' viewBox="0 0 100 101">
+      <g>
+        <circle cx="50.0878" cy="49.762" r="17.9926" transform="rotate(-44.4958 50.0878 49.762)" />
+        <ellipse cx="81.1349" cy="51.3082" rx="7.5" ry="11" transform="rotate(-88.0159 81.1349 51.3082)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(0.999855 -0.0170282 -0.0170282 -0.999855 49.8056 19.5585)" />
+        <ellipse cx="19.1337" cy="50.8315" rx="7.5" ry="11" transform="rotate(91.9841 19.1337 50.8315)" />
+      </g>
+    </symbol>
+    <symbol id='reserveThree' viewBox="0 0 98 41">
+      <g>
+        <circle cx="49.5732" cy="20.5" r="20.5" />
+        <ellipse rx="7.5" ry="11" transform="matrix(0 -1 -1 0 11.0732 33.5)" />
+        <ellipse cx="11.085" cy="7.5" rx="7.5" ry="11" transform="rotate(90 11.085 7.5)" />
+        <rect x="77.0732" width="20" height="41">
+      </g>
+    </symbol>
+    <symbol id='reserveFour' viewBox="0 0 95 41">
+      <g>
+        <circle cx="46.5732" cy="20.5" r="20.5" />
+        <rect x="74.0732" width="20" height="41" />
+        <rect x="0.0732422" width="20" height="41" />
+      </g>
+    </symbol>
+    <symbol id='reserveFive' viewBox="0 0 156 157">
+      <g>
+        <circle cx="77.6718" cy="67.5996" r="35.78" transform="rotate(-44.4958 77.6718 67.5996)" />
+        <ellipse cx="127.326" cy="68.8775" rx="7.5" ry="11" transform="rotate(-88.0159 127.326 68.8775)" />
+        <ellipse cx="28.3265" cy="68.8765" rx="7.5" ry="11" transform="rotate(-88.0159 28.3265 68.8765)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(0.999855 -0.0170282 -0.0170282 -0.999855 77.7595 121.128)" />
+        <ellipse cx="34.3499" cy="93.9971" rx="7.5" ry="11" transform="rotate(60 34.3499 93.9971)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(-0.5 0.866025 0.866025 0.5 119.35 93.9962)" />
+        <ellipse cx="51.0684" cy="112.277" rx="7.5" ry="11" transform="rotate(30 51.0684 112.277)" />
+        <ellipse rx="7.5" ry="11" transform="matrix(-0.866025 0.5 0.5 0.866025 104.068 112.277)" />
+        <path
+          d="M20.3677 43.2973C24.5607 32.8919 32.4498 23.8849 42.9184 17.551C53.3869 11.217 65.9049 7.87697 78.7006 8.00346C91.4963 8.12996 103.922 11.7166 114.219 18.2558C124.515 24.795 132.162 33.9556 136.076 44.4412L119.021 49.1572C116.256 41.7509 110.855 35.2805 103.582 30.6616C96.3094 26.0428 87.5329 23.5094 78.4949 23.4201C69.4568 23.3307 60.6151 25.6899 53.2208 30.1638C45.8265 34.6376 40.2542 40.9996 37.2925 48.3492L20.3677 43.2973Z" />
+      </g>
+    </symbol>
+
+    <symbol id='footerInsta' viewBox="0 0 50 50">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.6932 0.15C17.3591 0.0272727 18.2091 0 25 0C31.7909 0 32.6409 0.0295454 35.3045 0.15C37.9682 0.270454 39.7864 0.695455 41.3773 1.31136C43.0432 1.94091 44.5545 2.925 45.8045 4.19773C47.0773 5.44545 48.0591 6.95455 48.6864 8.62273C49.3045 10.2136 49.7273 12.0318 49.85 14.6909C49.9727 17.3614 50 18.2114 50 25C50 31.7909 49.9705 32.6409 49.85 35.3068C49.7295 37.9659 49.3045 39.7841 48.6864 41.375C48.0591 43.0434 47.0756 44.555 45.8045 45.8045C44.5545 47.0773 43.0432 48.0591 41.3773 48.6864C39.7864 49.3045 37.9682 49.7273 35.3091 49.85C32.6409 49.9727 31.7909 50 25 50C18.2091 50 17.3591 49.9705 14.6932 49.85C12.0341 49.7295 10.2159 49.3045 8.625 48.6864C6.95664 48.059 5.44505 47.0756 4.19545 45.8045C2.92359 44.5561 1.93935 43.0452 1.31136 41.3773C0.695455 39.7864 0.272727 37.9682 0.15 35.3091C0.0272727 32.6386 0 31.7886 0 25C0 18.2091 0.0295454 17.3591 0.15 14.6955C0.270454 12.0318 0.695455 10.2136 1.31136 8.62273C1.94028 6.95473 2.92527 5.44389 4.19773 4.19545C5.44555 2.92387 6.95562 1.93964 8.62273 1.31136C10.2136 0.695455 12.0318 0.272727 14.6909 0.15H14.6932ZM35.1023 4.65C32.4659 4.52955 31.675 4.50455 25 4.50455C18.325 4.50455 17.5341 4.52955 14.8977 4.65C12.4591 4.76136 11.1364 5.16818 10.2545 5.51136C9.08864 5.96591 8.25455 6.50455 7.37955 7.37955C6.5501 8.18648 5.91177 9.16882 5.51136 10.2545C5.16818 11.1364 4.76136 12.4591 4.65 14.8977C4.52955 17.5341 4.50455 18.325 4.50455 25C4.50455 31.675 4.52955 32.4659 4.65 35.1023C4.76136 37.5409 5.16818 38.8636 5.51136 39.7455C5.91136 40.8295 6.55 41.8136 7.37955 42.6205C8.18636 43.45 9.17045 44.0886 10.2545 44.4886C11.1364 44.8318 12.4591 45.2386 14.8977 45.35C17.5341 45.4705 18.3227 45.4955 25 45.4955C31.6773 45.4955 32.4659 45.4705 35.1023 45.35C37.5409 45.2386 38.8636 44.8318 39.7455 44.4886C40.9114 44.0341 41.7455 43.4955 42.6205 42.6205C43.45 41.8136 44.0886 40.8295 44.4886 39.7455C44.8318 38.8636 45.2386 37.5409 45.35 35.1023C45.4705 32.4659 45.4955 31.675 45.4955 25C45.4955 18.325 45.4705 17.5341 45.35 14.8977C45.2386 12.4591 44.8318 11.1364 44.4886 10.2545C44.0341 9.08864 43.4955 8.25455 42.6205 7.37955C41.8135 6.55016 40.8311 5.91184 39.7455 5.51136C38.8636 5.16818 37.5409 4.76136 35.1023 4.65ZM21.8068 32.7068C23.5901 33.4492 25.5759 33.5494 27.4248 32.9903C29.2738 32.4312 30.8713 31.2475 31.9446 29.6415C33.0178 28.0354 33.5001 26.1065 33.3092 24.1843C33.1183 22.2621 32.2659 20.4658 30.8977 19.1023C30.0255 18.2306 28.9709 17.5632 27.8098 17.1481C26.6488 16.7329 25.4101 16.5804 24.1829 16.7014C22.9558 16.8224 21.7708 17.214 20.7132 17.848C19.6556 18.482 18.7517 19.3426 18.0666 20.3678C17.3815 21.3931 16.9322 22.5575 16.7512 23.7772C16.5701 24.9969 16.6617 26.2416 17.0194 27.4216C17.3771 28.6017 17.992 29.6877 18.8198 30.6016C19.6476 31.5155 20.6678 32.2345 21.8068 32.7068ZM15.9136 15.9136C17.1069 14.7204 18.5235 13.7739 20.0825 13.1281C21.6415 12.4823 23.3125 12.1499 25 12.1499C26.6875 12.1499 28.3585 12.4823 29.9175 13.1281C31.4765 13.7739 32.8931 14.7204 34.0864 15.9136C35.2796 17.1069 36.2261 18.5235 36.8719 20.0825C37.5177 21.6415 37.8501 23.3125 37.8501 25C37.8501 26.6875 37.5177 28.3585 36.8719 29.9175C36.2261 31.4765 35.2796 32.8931 34.0864 34.0864C31.6765 36.4962 28.408 37.8501 25 37.8501C21.592 37.8501 18.3235 36.4962 15.9136 34.0864C13.5038 31.6765 12.1499 28.408 12.1499 25C12.1499 21.592 13.5038 18.3235 15.9136 15.9136ZM40.7 14.0636C40.9957 13.7847 41.2324 13.4493 41.3961 13.0772C41.5599 12.7052 41.6473 12.304 41.6532 11.8976C41.6591 11.4911 41.5835 11.0876 41.4306 10.7109C41.2778 10.3343 41.051 9.99207 40.7635 9.70463C40.4761 9.4172 40.1339 9.19036 39.7573 9.03754C39.3806 8.88472 38.9771 8.80904 38.5706 8.81496C38.1642 8.82089 37.763 8.9083 37.391 9.07204C37.0189 9.23577 36.6835 9.47249 36.4045 9.76818C35.8621 10.3432 35.5651 11.1071 35.5766 11.8976C35.5881 12.688 35.9073 13.4429 36.4663 14.0019C37.0253 14.5609 37.7801 14.8801 38.5706 14.8916C39.3611 14.9031 40.1249 14.6061 40.7 14.0636Z">
+      </g>
+    </symbol>
+
+    <symbol id='footerYt' viewBox="0 0 50 50">
+      <g>
+        <path
+          d="M32.3075 16.3145H17.6925C14.825 16.3145 12.5 18.6145 12.5 21.4495V28.6744C12.5 31.5119 14.825 33.8094 17.6925 33.8094H32.3075C35.175 33.8094 37.5 31.5094 37.5 28.6744V21.4495C37.5 18.612 35.175 16.3145 32.3075 16.3145ZM28.7975 25.4145L21.96 28.6395C21.9182 28.6592 21.872 28.6681 21.8259 28.6653C21.7797 28.6625 21.7349 28.6481 21.6958 28.6234C21.6567 28.5988 21.6244 28.5646 21.602 28.5241C21.5796 28.4837 21.5677 28.4382 21.5675 28.392V21.742C21.5679 21.6951 21.5803 21.6491 21.6035 21.6084C21.6267 21.5677 21.6599 21.5335 21.6999 21.5092C21.74 21.4849 21.7856 21.4713 21.8324 21.4696C21.8793 21.4679 21.9258 21.4782 21.9675 21.4995L28.8025 24.9245C28.8474 24.9479 28.885 24.9834 28.9111 25.0269C28.9371 25.0704 28.9506 25.1203 28.9501 25.171C28.9496 25.2217 28.9351 25.2713 28.9081 25.3142C28.8812 25.3572 28.8429 25.3919 28.7975 25.4145Z">
+      </g>
+      <g>
+        <path
+          d="M10 5C8.67392 5 7.40215 5.52678 6.46447 6.46447C5.52678 7.40215 5 8.67392 5 10V40C5 41.3261 5.52678 42.5979 6.46447 43.5355C7.40215 44.4732 8.67392 45 10 45H40C41.3261 45 42.5979 44.4732 43.5355 43.5355C44.4732 42.5979 45 41.3261 45 40V10C45 8.67392 44.4732 7.40215 43.5355 6.46447C42.5979 5.52678 41.3261 5 40 5H10ZM10 0H40C42.6522 0 45.1957 1.05357 47.0711 2.92893C48.9464 4.8043 50 7.34784 50 10V40C50 42.6522 48.9464 45.1957 47.0711 47.0711C45.1957 48.9464 42.6522 50 40 50H10C7.34784 50 4.8043 48.9464 2.92893 47.0711C1.05357 45.1957 0 42.6522 0 40V10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0Z">
+      </g>
+    </symbol>
+
+    <symbol id='footerVk' viewBox="0 0 50 50">
+      <g>
+        <path
+          d="M9.27727 0C6.81973 0.00957648 4.46558 0.990076 2.72783 2.72783C0.990076 4.46558 0.00957648 6.81973 0 9.27727V40.7227C0.00957648 43.1803 0.990076 45.5344 2.72783 47.2722C4.46558 49.0099 6.81973 49.9904 9.27727 50H40.7227C43.1803 49.9904 45.5344 49.0099 47.2722 47.2722C49.0099 45.5344 49.9904 43.1803 50 40.7227V9.27727C49.9904 6.81973 49.0099 4.46558 47.2722 2.72783C45.5344 0.990076 43.1803 0.00957648 40.7227 0H9.27727ZM9.27727 4.54545H40.7227C43.3591 4.54545 45.4545 6.64091 45.4545 9.27727V40.7227C45.4545 43.3591 43.3591 45.4545 40.7227 45.4545H9.27727C8.65479 45.4585 8.03771 45.3388 7.46185 45.1023C6.88599 44.8659 6.3628 44.5175 5.92263 44.0774C5.48245 43.6372 5.13406 43.114 4.89765 42.5381C4.66124 41.9623 4.54153 41.3452 4.54545 40.7227V9.27727C4.54545 6.64091 6.64091 4.54545 9.27727 4.54545ZM24.3614 16.4318C22.6909 16.4159 21.2705 16.4318 20.4727 16.8227C19.9386 17.0818 19.5318 17.6659 19.7795 17.6932C20.0909 17.7386 20.7909 17.8886 21.1659 18.3955C21.6432 19.0432 21.6273 20.5091 21.6273 20.5091C21.6273 20.5091 21.8932 24.5386 20.9773 25.0455C20.3477 25.3909 19.4864 24.6886 17.6227 21.4841C16.6727 19.8341 15.9545 18.0136 15.9545 18.0136C15.9545 18.0136 15.8182 17.675 15.5727 17.4977C15.2705 17.2773 14.8523 17.2045 14.8523 17.2045L10.4045 17.2318C10.4045 17.2318 9.73864 17.2591 9.5 17.5432C9.27727 17.8091 9.48182 18.3318 9.48182 18.3318C9.48182 18.3318 12.9614 26.4727 16.9023 30.575C20.5159 34.3409 24.6182 34.0909 24.6182 34.0909H26.4818C26.4818 34.0909 27.0409 34.0295 27.325 33.7273C27.5932 33.4432 27.5841 32.9091 27.5841 32.9091C27.5841 32.9091 27.5477 30.4159 28.7023 30.0432C29.8477 29.6864 31.3023 32.4568 32.8568 33.5227C34.0386 34.3295 34.9341 34.1523 34.9341 34.1523L39.0909 34.0909C39.0909 34.0909 41.2568 33.9568 40.2273 32.2432C40.1477 32.1114 39.6318 30.9841 37.1477 28.675C34.5364 26.2614 34.8841 26.6523 38.025 22.4705C39.9341 19.9227 40.6977 18.3682 40.4568 17.6932C40.2295 17.0636 38.825 17.2318 38.825 17.2318L34.1455 17.2591C34.1455 17.2591 33.8 17.2136 33.5432 17.3659C33.3666 17.4971 33.2259 17.6706 33.1341 17.8705C33.1341 17.8705 32.3886 19.8409 31.4023 21.5205C29.325 25.0523 28.4818 25.2477 28.1455 25.0273C27.3545 24.5114 27.55 22.9659 27.55 21.875C27.55 18.4386 28.0727 17.0182 26.5386 16.6477C26.0318 16.5227 25.6591 16.4432 24.3636 16.4318H24.3614Z">
+      </g>
+    </symbol>
+
+  </svg>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="header__list-outer">
+            <ul class="header__list">
+              <li class="header__list-item">
+                <a class="header__list-link" href="about.html">
+                  о нас
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="gallery.html">
+                  галерея
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="main-menu.html">
+                  кухня
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="bar.html">
+                  бар
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="wine.html">
+                  винная карта
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="affiche.html">
+                  афиша
+                </a>
+              </li>
+              <li class="header__list-item">
+                <a class="header__list-link" href="contacts.html">
+                  контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__num-outer">
+            <a class="header__num" href="tel:+88009999999 ">
+              +8 (800) 999 99 99 <br>
+            </a>
+            <span class='header__num-info'>БРОНЬ СТОЛОВ С 9:00 ДО 23:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="second-header unFixed">
+        <div class="container">
+          <div class="second-header__inner">
+            <button class="second-header__menu-button">
+              <span class='second-header__menu-button-span'></span>
+              <span class='second-header__menu-button-span'></span>
+              <span class='second-header__menu-button-span'></span>
+            </button>
+            <ul class="second-header__second-menu">
+              <li class="second-header__second-menu-item">
+                <a class="second-header__second-menu-link" href="romantic.html">
+                  <img class='second-header__second-menu-link-img' src='images/1x1.png' data-src="images/header/1.svg"
+                    alt="icon">
+                  <div class="second-header__second-menu-link-text">
+                    Романтический<br>
+                    вечер
+                  </div>
+                </a>
+              </li>
+              <li class="second-header__second-menu-item">
+                <a class="second-header__second-menu-link" href="#">
+                  <img class='second-header__second-menu-link-img' src='images/1x1.png' data-src="images/header/2.svg"
+                    alt="icon">
+                  <div class="second-header__second-menu-link-text">
+                    Семейный<br>
+                    ужин
+                  </div>
+                </a>
+              </li>
+              <li class="second-header__second-menu-item">
+                <a class="second-header__second-menu-link" href="#">
+                  <img class='second-header__second-menu-link-img' src='images/1x1.png' data-src="images/header/3.svg"
+                    alt="icon">
+                  <div class="second-header__second-menu-link-text">
+                    Уютное<br>
+                    мероприятие
+                  </div>
+                </a>
+              </li>
+              <li class="second-header__second-menu-item">
+                <a class="second-header__second-menu-link" href="#">
+                  <img class='second-header__second-menu-link-img' src='images/1x1.png' data-src="images/header/4.svg"
+                    alt="icon">
+                  <div class="second-header__second-menu-link-text">
+                    Большое<br>
+                    торжество
+                  </div>
+                </a>
+              </li>
+              <li class="second-header__second-menu-item">
+                <a class="second-header__second-menu-link" href="#">
+                  <img class='second-header__second-menu-link-img' src='images/1x1.png' data-src="images/header/5.svg"
+                    alt="icon">
+                  <div class="second-header__second-menu-link-text">
+                    Деловая<br>
+                    встреча
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="second-header__num-outer">
+              <a class="second-header__num-link" href="#">Заказать звонок</a>
+              <div class="second-header__num-text">
+                +7 (862) 277 75 14<br>
+                СОЧИ, МОРСКОЙ ПЕР. 1/1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <nav class="second-header__menu-outer">
+        <ul class="second-header__menu">
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link active" href="index.html">
+              ГЛАВНАЯ
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="about.html">
+              О НАС
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="gallery.html">
+              ГАЛЕРЕЯ
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="main-menu.html">
+              КУХНЯ
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="bar.html">
+              БАР
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="wine.html">
+              ВИННАЯ КАРТА
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="affiche.html">
+              АФИША
+            </a>
+          </li>
+          <li class="second-header__menu-item">
+            <a class="second-header__menu-link" href="contacts.html">
+              КОНТАКТЫ
+            </a>
+          </li>
+        </ul>
+        <ul class="second-header__submenu-link-list">
+          <li class="second-header__submenu-link-item">
+            <a class="second-header__submenu-link" href="#">
+              Правовые документы
+            </a>
+          </li>
+          <li class="second-header__submenu-link-item">
+            <a class="second-header__submenu-link" href="#">
+              Обратная связь
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-header">
+        <div class="container">
+          <div class="mobile-header__inner">
+            <button class="mobile-header__menu-button">
+              <span class='mobile-header__menu-button-span'></span>
+              <span class='mobile-header__menu-button-span'></span>
+              <span class='mobile-header__menu-button-span'></span>
+            </button>
+            <nav class="mobile-header__menu-outer">
+              <div class="mobile-header__menu-button-close">
+                <span class='mobile-header__menu-button-close-span'></span>
+                <span class='mobile-header__menu-button-close-span'></span>
+              </div>
+              <ul class="mobile-header__menu-top">
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="about.html">
+                    О НАС
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="gallery.html">
+                    ГАЛЕРЕЯ
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="main-menu.html">
+                    КУХНЯ
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="bar.html">
+                    БАР
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="wine.html">
+                    ВИНАЯ КАРТА
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="affiche.html">
+                    АФИША
+                  </a>
+                </li>
+                <li class="mobile-header__menu-top-item">
+                  <a class="mobile-header__menu-top-link" href="contacts.html">
+                    КОНТАКТЫ
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-header__menu-bottom">
+                <li class="mobile-header__menu-bottom-item">
+                  <a class="mobile-header__menu-bottom-link" href="#">
+                    <img class='mobile-header__menu-bottom-link-img' src='images/header/1.svg' alt="icon">
+                    <div class="mobile-header__menu-bottom-link-text">
+                      Романтический
+                      вечер
+                    </div>
+                  </a>
+                </li>
+                <li class="mobile-header__menu-bottom-item">
+                  <a class="mobile-header__menu-bottom-link" href="#">
+                    <img class='mobile-header__menu-bottom-link-img' src='images/header/2.svg' alt="icon">
+                    <div class="mobile-header__menu-bottom-link-text">
+                      Семейный
+                      ужин
+                    </div>
+                  </a>
+                </li>
+                <li class="mobile-header__menu-bottom-item">
+                  <a class="mobile-header__menu-bottom-link" href="#">
+                    <img class='mobile-header__menu-bottom-link-img' src='images/header/3.svg' alt="icon">
+                    <div class="mobile-header__menu-bottom-link-text">
+                      Уютное мероприятие
+                    </div>
+                  </a>
+                </li>
+                <li class="mobile-header__menu-bottom-item">
+                  <a class="mobile-header__menu-bottom-link" href="#">
+                    <img class='mobile-header__menu-bottom-link-img' src='images/header/4.svg' alt="icon">
+                    <div class="mobile-header__menu-bottom-link-text">
+                      Большое торжество
+                    </div>
+                  </a>
+                </li>
+                <li class="mobile-header__menu-bottom-item">
+                  <a class="mobile-header__menu-bottom-link" href="#">
+                    <img class='mobile-header__menu-bottom-link-img' src='images/header/5.svg' alt="icon">
+                    <div class="mobile-header__menu-bottom-link-text">
+                      Деловая встреча
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="mobile-header__lang">
+              <li class="mobile-header__lang-item">
+                <button class="mobile-header__lang-button ru active">
+                  RUS
+                </button>
+              </li>
+              <li class="mobile-header__lang-item">
+                <button class="mobile-header__lang-button en">
+                  ENG
+                </button>
+              </li>
+            </ul>
+
+            <div class="mobile-header__num-outer">
+              <a class="mobile-header__num" href="tel:+88009999999 ">
+                +8 (800) 999 99 99 <br>
+              </a>
+              <span class='mobile-header__num-info'>БРОНЬ СТОЛОВ С 9:00 ДО 23:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="banner">
+        <h6 class='title-validator'>
+          title
+        </h6>
+        <div class="container banner__container">
+          <div class="banner__inner">
+            <nav class="banner__additional">
+              <ul class="banner__lang">
+                <li class="banner__lang-item">
+                  <button class="banner__lang-button active ru">RUS</button>
+                </li>
+                <li class="banner__lang-item">
+                  <button class="banner__lang-button en">ENG</button>
+                </li>
+              </ul>
+              <ul class="banner__social">
+                <li class="banner__social-item">
+                  <a class="banner__social-link" href="#">
+                    <svg class='banner__social-link-img'>
+                      <use xlink:href='#bannerVk'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="banner__social-item">
+                  <a class="banner__social-link" href="#">
+                    <svg class='banner__social-link-img'>
+                      <use xlink:href='#bannerInsta'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="banner__social-item">
+                  <a class="banner__social-link" href="#">
+                    <svg class='banner__social-link-img'>
+                      <use xlink:href='#bannerYt'></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="banner__arrow-down-outer">
+                <a class="banner__arrow-down-link" href='#we-can'>
+                  <svg class='banner__arrow-down-img'>
+                    <use xlink:href='#bannerArrow'></use>
+                  </svg>
+                </a>
+              </div>
+            </nav>
+            <h1 class="banner__logo-outer">
+              title
+              <img class="banner__logo" src='images/1x1.png' data-src="images/logo.svg" alt="logo">
+            </h1>
+            <p class="banner__sublogo">
+              АТМОСФЕРНЫЙ РЕСТОРАН С <br>
+              ПАНОРАМНЫМ ВИДОМ
+            </p>
+            <div class="banner__form-outer">
+              <form class="banner__form form" action="#">
+                <div class="banner__input-wrapper">
+                  <div class="banner__input-outer">
+                    <input class='banner__input nameInput' required type="text" placeholder="Имя"
+                      data-validate-field="nameOne">
+                  </div>
+                  <div class="banner__input-outer">
+                    <input class='banner__input telInput' required type="text" placeholder="Номер телефона"
+                      data-validate-field="telOne">
+                  </div>
+                  <div class="banner__input-outer">
+                    <input class='banner__input dateInput' required type="text" placeholder="Дата"
+                      data-validate-field="dateOne">
+                  </div>
+                  <div class="banner__input-outer">
+                    <input class='banner__input timeInput' required type="text" placeholder="Время"
+                      data-validate-field="timeOne">
+                  </div>
+                </div>
+                <button class="banner__button" type='submit'>
+                  отправить
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="we-can" id='we-can'>
+        <div class="we-can__container">
+          <div class="we-can__inner">
+            <h2 class="we-can__title">
+              <span class='we-can__title-span'>МЫ РАДЫ</span> ПОМОЧЬ ВАМ В ОРГАНИЗАЦИИ
+            </h2>
+            <nav class="we-can__tab-outer">
+              <ul class="we-can__tab-list">
+                <span class="we-can__tab-line"></span>
+                <li class="we-can__tab-item">
+                  <button class="we-can__tab-button active" data-tab="#we-can__tab_1">
+                    Романтический вечер
+                  </button>
+                </li>
+                <li class="we-can__tab-item">
+                  <button class="we-can__tab-button" data-tab="#we-can__tab_2">
+                    Семейная встреча
+                  </button>
+                </li>
+                <li class="we-can__tab-item">
+                  <button class="we-can__tab-button" data-tab="#we-can__tab_3">
+                    Уютное мероприятие
+                  </button>
+                </li>
+                <li class="we-can__tab-item">
+                  <button class="we-can__tab-button" data-tab="#we-can__tab_4">
+                    Большое торжество
+                  </button>
+                </li>
+                <li class="we-can__tab-item">
+                  <button class="we-can__tab-button" data-tab="#we-can__tab_5">
+                    Деловая встреча
+                  </button>
+                </li>
+              </ul>
+              <ul class="we-can__content">
+                <li class="we-can__content-item active" id='we-can__tab_1'
+                  style='background-image: url(images/we-can/1.jpg);'>
+                  <p class="we-can__content-suptitle">
+                    Организация
+                  </p>
+                  <p class="we-can__content-title">
+                    <span class='we-can__content-title-span'>РОМАНТИЧЕСКАЯ</span> СКАЗКА
+                  </p>
+                  <p class="we-can__content-text">
+                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <a class="we-can__content-link" href="#">
+                    Показать
+                  </a>
+                </li>
+                <li class="we-can__content-item" id='we-can__tab_2' style='background-image: url(images/we-can/1.jpg);'>
+                  <p class="we-can__content-suptitle">
+                    Организация
+                  </p>
+                  <p class="we-can__content-title">
+                    <span class='we-can__content-title-span'>РОМАНТИЧЕСКАЯ</span> СКАЗКА 2
+                  </p>
+                  <p class="we-can__content-text">
+                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <a class="we-can__content-link" href="#">
+                    Показать
+                  </a>
+                </li>
+                <li class="we-can__content-item" id='we-can__tab_3' style='background-image: url(images/we-can/1.jpg);'>
+                  <p class="we-can__content-suptitle">
+                    Организация
+                  </p>
+                  <p class="we-can__content-title">
+                    <span class='we-can__content-title-span'>РОМАНТИЧЕСКАЯ</span> СКАЗКА 3
+                  </p>
+                  <p class="we-can__content-text">
+                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <a class="we-can__content-link" href="#">
+                    Показать
+                  </a>
+                </li>
+                <li class="we-can__content-item" id='we-can__tab_4' style='background-image: url(images/we-can/1.jpg);'>
+                  <p class="we-can__content-suptitle">
+                    Организация
+                  </p>
+                  <p class="we-can__content-title">
+                    <span class='we-can__content-title-span'>РОМАНТИЧЕСКАЯ</span> СКАЗКА 4
+                  </p>
+                  <p class="we-can__content-text">
+                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <a class="we-can__content-link" href="#">
+                    Показать
+                  </a>
+                </li>
+                <li class="we-can__content-item" id='we-can__tab_5' style='background-image: url(images/we-can/1.jpg);'>
+                  <p class="we-can__content-suptitle">
+                    Организация
+                  </p>
+                  <p class="we-can__content-title">
+                    <span class='we-can__content-title-span'>РОМАНТИЧЕСКАЯ</span> СКАЗКА 5
+                  </p>
+                  <p class="we-can__content-text">
+                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <a class="we-can__content-link" href="#">
+                    Показать
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="main-menu" id='main-menu'>
+        <div class="container">
+          <div class="main-menu__inner">
+            <h2 class="main-menu__title">
+              <span class="main-menu__title-span">
+                Изучите
+              </span>
+              МЕНЮ
+            </h2>
+            <div class="main-menu__content">
+              <div class="main-menu__about">
+                <div class="main-menu__about-title">
+                  <span class="main-menu__about-title-span">
+                    ОСНОВНОЕ
+                  </span>
+                  МЕНЮ
+                </div>
+                <div class="main-menu__about-text">
+                  Ресторан «Aurum» представляет современную европейскую кухню, приятное разнообразие в меню вносят
+                  неповторимые авторские блюда, созданные шеф-поваром совместно с командой.
+                </div>
+                <a class="main-menu__about-link" href="#">Подробнее</a>
+              </div>
+              <div class="main-menu__nav scroll-class">
+                <a class="main-menu__nav-link active" href="#main-menu"></a>
+                <a class="main-menu__nav-link" href="#wine"></a>
+                <a class="main-menu__nav-link" href="#bar"></a>
+              </div>
+              <div class="main-menu__dish">
+                <div class="main-menu__dish-title">
+                  <span class="main-menu__about-title-span">
+                    Наименование
+                  </span>
+                  блюда
+                </div>
+                <div class="main-menu__dish-subtitle">
+                  Основное меню
+                </div>
+                <div class="main-menu__dish-text">
+                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book.
+                </div>
+                <a class="main-menu__dish-link" href='#'>
+                  Увидеть больше
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="main-menu-bg" src='images/1x1.png' data-src="images/main-menu/bg.png" alt="image"
+          data-aos="fade-left" data-aos-anchor-placement="top-center">
+        <div class="main-menu-img-outer">
+          <div class='main-menu-img main-menu-img-1'>
+            <img src='images/1x1.png' data-src="images/main-menu/1.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-2'>
+            <img src='images/1x1.png' data-src="images/main-menu/2.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-3'>
+            <img src='images/1x1.png' data-src="images/main-menu/3.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-4'>
+            <img src='images/1x1.png' data-src="images/main-menu/4.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-5'>
+            <img src='images/1x1.png' data-src="images/main-menu/5.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-6'>
+            <img src='images/1x1.png' data-src="images/main-menu/6.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-7'>
+            <img src='images/1x1.png' data-src="images/main-menu/7.png" alt="image">
+          </div>
+          <div class='main-menu-img main-menu-img-8'>
+            <img src='images/1x1.png' data-src="images/main-menu/8.png" alt="image">
+          </div>
+        </div>
+      </section>
+      <section class="wine" id='wine'>
+        <h6 class='title-validator'>
+          title
+        </h6>
+        <div class="container">
+          <div class="wine__inner">
+            <div class="wine__content">
+              <div class="wine__about">
+                <div class="wine__about-title">
+                  <span class="wine__about-title-span">
+                    ВИННАЯ
+                  </span>
+                  КАРТА
+                </div>
+                <div class="wine__about-text">
+                  Приятным дополнением к многообразию блюд станет богатая барная карта. В ней представлены популярные
+                  сорта вин и крепкого алкоголя, в баре готовят оригинальные авторские коктейли и безалкогольные
+                  прохладительные напитки.
+                </div>
+                <a class="wine__about-link" href="#">Подробнее</a>
+              </div>
+              <div class="wine__nav scroll-class">
+                <a class="wine__nav-link" href="#main-menu"></a>
+                <a class="wine__nav-link active" href="#wine"></a>
+                <a class="wine__nav-link" href="#bar"></a>
+              </div>
+              <div class="wine__dish">
+                <div class="wine__dish-title">
+                  <span class="wine__about-title-span">
+                    Наименование
+                  </span>
+                  блюда
+                </div>
+                <div class="wine__dish-subtitle">
+                  Винная карта
+                </div>
+                <div class="wine__dish-text">
+                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book.
+                </div>
+                <a class="wine__dish-link" href='#'>
+                  Увидеть больше
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="wine-bg" src='images/1x1.png' data-src="images/wine/bg.png" alt="image" data-aos="fade-left"
+          data-aos-anchor-placement="top-center">
+        <div class="wine-img-outer">
+          <img class='wine-img wine-img-1' src='images/1x1.png' data-src="images/wine/1.png" alt="image">
+          <img class='wine-img wine-img-2' src='images/1x1.png' data-src="images/wine/2.png" alt="image">
+          <img class='wine-img wine-img-3' src='images/1x1.png' data-src="images/wine/3.png" alt="image">
+          <img class='wine-img wine-img-4' src='images/1x1.png' data-src="images/wine/4.png" alt="image">
+          <img class='wine-img wine-img-5' src='images/1x1.png' data-src="images/wine/5.png" alt="image">
+          <img class='wine-img wine-img-6' src='images/1x1.png' data-src="images/wine/6.png" alt="image">
+          <img class='wine-img wine-img-7' src='images/1x1.png' data-src="images/wine/7.png" alt="image">
+        </div>
+      </section>
+      <section class="bar" id='bar'>
+        <h6 class='title-validator'>
+          title
+        </h6>
+        <div class="container">
+          <div class="bar__inner">
+            <div class="bar__content">
+              <div class="bar__about">
+                <div class="bar__about-title">
+                  <span class="bar__about-title-span">
+                    БАРНАЯ
+                  </span>
+                  КАРТА
+                </div>
+                <div class="bar__about-text">Приятным дополнением к многообразию блюд станет богатая барная карта. В ней
+                  представлены популярные сорта вин и крепкого алкоголя, в баре готовят оригинальные авторские коктейли
+                  и безалкогольные прохладительные напитки.
+                </div>
+                <a class="bar__about-link" href="#">Подробнее</a>
+              </div>
+              <div class="bar__nav scroll-class">
+                <a class="bar__nav-link" href="#main-menu"></a>
+                <a class="bar__nav-link" href="#wine"></a>
+                <a class="bar__nav-link active" href="#bar"></a>
+              </div>
+              <div class="bar__dish">
+                <div class="bar__dish-title">
+                  <span class="bar__about-title-span">
+                    Наименование
+                  </span>
+                  блюда
+                </div>
+                <div class="bar__dish-subtitle">
+                  Винная карта
+                </div>
+                <div class="bar__dish-text">
+                  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                  it to make a type specimen book.
+                </div>
+                <a class="bar__dish-link" href='#'>
+                  Увидеть больше
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="bar-bg" src='images/1x1.png' data-src="images/bar/bg.png" alt="image" data-aos="fade-left"
+          data-aos-anchor-placement="top-center">
+        <div class="bar-img-outer">
+          <img class='bar-img bar-img-1' src='images/1x1.png' data-src="images/bar/1.png" alt="image">
+          <img class='bar-img bar-img-2' src='images/1x1.png' data-src="images/bar/2.png" alt="image">
+          <img class='bar-img bar-img-3' src='images/1x1.png' data-src="images/bar/3.png" alt="image">
+          <img class='bar-img bar-img-4' src='images/1x1.png' data-src="images/bar/4.png" alt="image">
+          <img class='bar-img bar-img-5' src='images/1x1.png' data-src="images/bar/5.png" alt="image">
+          <img class='bar-img bar-img-6' src='images/1x1.png' data-src="images/bar/6.png" alt="image">
+          <img class='bar-img bar-img-7' src='images/1x1.png' data-src="images/bar/7.png" alt="image">
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__inner">
+          <h3 class="about__title">
+            <span class="about__title-span">
+              Узнайте
+            </span>
+            ОБ AURUM
+          </h3>
+          <div class="about__content-info">
+            <div class="about__content">
+              <div class="about__content-top">
+                <div class="about__content-block">
+                  <div class="about__content-item">
+                    <img class="about__content-img" src='images/1x1.png' data-src="images/about/1.jpg" alt="image">
+                  </div>
+                  <div class="about__content-item">
+                    <a class='about__content-link' data-fancybox href="images/video.mp4">
+                      <img class="about__content-img" src='images/1x1.png' data-src="images/about/video-banner.jpg"
+                        alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="about__content-block">
+                  <div class="about__content-item">
+                    <img class="about__content-img" src='images/1x1.png' data-src="images/about/2.jpg" alt="image">
+                  </div>
+                  <div class="about__content-item">
+                    <img class="about__content-img" src='images/1x1.png' data-src="images/about/3.jpg" alt="image">
+                  </div>
+                </div>
+              </div>
+              <div class="about__content-bottom">
+                <div class="about__content-block">
+                  <div class="about__content-item">
+                    <img class="about__content-img" src='images/1x1.png' data-src="images/about/4.jpg" alt="image">
+                  </div>
+                </div>
+                <div class="about__content-block">
+                  <div class="about__content-item">
+                    <img class="about__content-img" src='images/1x1.png' data-src="images/about/5.jpg" alt="image">
+                  </div>
+                  <div class="about__content-item">
+                    <a class="about__link" href="#">О НАС</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about__info">
+              <h6 class="about__info-title">
+                <img class='about__info-title-img' src='images/1x1.png' data-src="images/logo.svg" alt="title">
+              </h6>
+              <div class="about__info-subtitle">
+                неповторимый и инновационный ресторан
+              </div>
+              <p class="about__info-text">
+                Помимо безупречного качества блюд, ресторан «Aurum» отличается привлекательным расположением
+                <span class="about__info-text-span">
+                  на первой береговой линии Сочи
+                </span>, всего несколько метров разделяет его с побережьем. Такая особенность позволяет гостям
+                наслаждаться любимыми гастрономическими шедеврами в атмосфере гармонии, и
+                <span class="about__info-text-span">
+                  любоваться морскими просторами через огромные панорамные окна.
+                </span>
+                <br><br>
+
+                В зале ресторана всегда
+                <span class="about__info-text-span">
+                  царит спокойная и располагающая к безмятежному отдыху атмосфера.
+                </span> Также атмосферный ресторан может стать прекрасным местом для планирования деловой встречи.
+                <br><br>
+                <span class="about__info-text-span">
+                  «Aurum» - неповторимый и инновационный ресторан
+                </span>
+                , рассчитанный на широкий круг гостей, от любителей уединенного отдыха и романтики, до поклонников
+                феерических развлекательных программ и современной музыки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="container">
+          <div class="card__inner">
+            <h3 class="card__title">
+              <span class="card__title-span">
+                Присоединяйтесь
+              </span>
+              КЛУБНАЯ КАРТА
+            </h3>
+            <div class="card__subtitle-outer">
+              <p class="card__subtitle">
+                ПРИСОЕДИНЯЙТЕСЬ К ЧИСЛУ ПРИВЕЛИГИРОВАННЫХ
+              </p>
+            </div>
+            <div class="card__card-img-wrapper">
+              <div class="card__card-img-outer">
+                <img class="card__card-img" src='images/1x1.png' data-src="images/card/card1.png" alt="card">
+              </div>
+              <div class="card__card-img-outer">
+                <img class="card__card-img" src='images/1x1.png' data-src="images/card/card2.png" alt="card">
+              </div>
+            </div>
+            <div class="card__subimg-title">
+              <span class='card__subimg-title-span'>клубная </span>
+              карта
+              <img class='card__subimg-title-logo' src='images/1x1.png' data-src="images/card/logo.svg" alt="logo">
+            </div>
+            <div class="card__subimg-subtitle">
+              Станьте привилегированным гостем ресторана «Aurum» и получайте крутые бонусы в обслуживании
+            </div>
+            <button class="card__button">подробнее</button>
+          </div>
+        </div>
+      </section>
+      <section class="event">
+        <div class="container">
+          <div class="event__inner">
+            <h3 class="event__title">
+              <span class="event__title-span">
+                Посетите
+              </span>
+              МЕРОПРИЯТИЯ
+            </h3>
+            <div class="event__content">
+              <ul class="event__tab-list-one">
+                <li class="event__tab-list-one-item">
+                  <button class="event__tab-list-one-button active" data-id="1">
+                  </button>
+                </li>
+                <li class="event__tab-list-one-item">
+                  <button class="event__tab-list-one-button" data-id="2">
+                  </button>
+                </li>
+                <li class="event__tab-list-one-item">
+                  <button class="event__tab-list-one-button" data-id="3">
+                  </button>
+                </li>
+                <li class="event__tab-list-one-item">
+                  <button class="event__tab-list-one-button" data-id="4">
+                  </button>
+                </li>
+                <li class="event__tab-list-one-item">
+                  <button class="event__tab-list-one-button" data-id="5">
+                  </button>
+                </li>
+              </ul>
+              <div class="event__simple-block event__simple-block event__main-block" data-id="1" data-event_name='<span class="event__main-block-title-span">МИЩЕНКО</span>
+              ЕГОР' data-image="images/event/1.jpg" data-big_image="images/event/1.jpg"
+                data-event_date="15.07.2021 20:00"
+                data-announce="11 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper dictumst faucibus tortor in."
+                data-link="/some_link1.html" data-order_link="/some_order1.html">
+
+                <div class="event__main-block-img-outer">
+                  <img class="event__main-block-img" src='images/1x1.png' data-src="images/event/1.jpg" alt="image">
+                </div>
+                <div class="event__main-block-info">
+                  <div class="event__main-block-title-and-date">
+                    <div class="event__main-block-title">
+                      <span class="event__main-block-title-span">МИЩЕНКО</span>
+                      ЕГОР
+                    </div>
+                    <span class='event__main-block-date'>
+                      15.07.21 20:00
+                    </span>
+                  </div>
+                  <div class="event__main-block-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                    dictumst
+                    faucibus tortor in.
+                  </div>
+                  <div class="event__main-block-link-and-button">
+                    <a class="event__main-block-link" href="#">Подробнее</a>
+                    <button class="event__main-block-button">Забронировать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="event__block-outer">
+
+                <div class="event__simple-block event_data_class event__block" data-id="2" data-event_name='Анонс 2'
+                  data-image="images/event/2.jpg" data-big_image="images/event/2.jpg" data-event_date="17.08.2021 16:00"
+                  data-announce="22 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper dictumst faucibus tortor in."
+                  data-link="/some_link2.html" data-order_link="/some_order2.html">
+                  <div class="event__block-img-outer">
+                    <img src='images/1x1.png' data-src="images/event/2.jpg" alt="image" class="event__block-img">
+                  </div>
+                  <div class="event__block-title">
+                    Анонсы
+                  </div>
+                </div>
+                <div class="event__simple-block event_data_class event__block" data-id="3" data-event_name='Анонс 3'
+                  data-image="images/event/3.jpg" data-big_image="images/event/3.jpg" data-event_date="19.08.2021 16:00"
+                  data-announce="33 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper dictumst faucibus tortor in."
+                  data-link="/some_link3.html" data-order_link="/some_order3.html">
+
+                  <div class="event__block-img-outer">
+                    <img src='images/1x1.png' data-src="images/event/3.jpg" alt="image" class="event__block-img">
+                  </div>
+                  <div class="event__block-title">
+                    Анонсы
+                  </div>
+                </div>
+                <div class="event__simple-block event_data_class event__block" data-id="4" data-event_name='Анонс 4'
+                  data-image="images/event/4.jpg" data-big_image="images/event/4.jpg" data-event_date="21.08.2021 16:00"
+                  data-announce="44 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper dictumst faucibus tortor in."
+                  data-link="/some_link4.html" data-order_link="/some_order4.html">
+                  <div class="event__block-img-outer">
+                    <img src='images/1x1.png' data-src="images/event/4.jpg" alt="image" class="event__block-img">
+                  </div>
+                  <div class="event__block-title">
+                    Прошедшее
+                  </div>
+                </div>
+                <div class="event__simple-block event_data_class event__block" data-id="5" data-event_name='Анонс 5'
+                  data-image="images/event/5.jpg" data-big_image="images/event/5.jpg" data-event_date="29.08.2021 16:00"
+                  data-announce="55 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper dictumst faucibus tortor in."
+                  data-link="/some_link5.html" data-order_link="/some_order5.html">
+                  <div class="event__block-img-outer">
+                    <img src='images/1x1.png' data-src="images/event/5.jpg" alt="image" class="event__block-img">
+                  </div>
+                  <div class="event__block-title">
+                    Прошедшее
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="team__inner">
+            <h6 class="team__title">
+              <span class="team__title-span">Наша</span>
+              КОМАНДА
+            </h6>
+            <div class="team__tab-outer">
+              <div class="team__tab-outer-top">
+                <ul class="team__tab-content-name">
+                  <li class="team__tab-content-name-item ttcni1 active">
+                    <div class="team__tab-content-name-title">
+                      <span class="team__tab-content-name-title-span">
+                        Павел
+                      </span>
+                      Пищулин
+                    </div>
+                    <div class="team__tab-content-name-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                      dictumst faucibus tortor in.
+                    </div>
+                  </li>
+                  <li class="team__tab-content-name-item ttcni2">
+                    <div class="team__tab-content-name-title">
+                      <span class="team__tab-content-name-title-span">
+                        Павел
+                      </span>
+                      Пищулин2
+                    </div>
+                    <div class="team__tab-content-name-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                      dictumst faucibus tortor in.
+                    </div>
+                  </li>
+                  <li class="team__tab-content-name-item ttcni3">
+                    <div class="team__tab-content-name-title">
+                      <span class="team__tab-content-name-title-span">
+                        Павел
+                      </span>
+                      Пищулин3
+                    </div>
+                    <div class="team__tab-content-name-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                      dictumst faucibus tortor in.
+                    </div>
+                  </li>
+                  <li class="team__tab-content-name-item ttcni4">
+                    <div class="team__tab-content-name-title">
+                      <span class="team__tab-content-name-title-span">
+                        Павел
+                      </span>
+                      Пищулин4
+                    </div>
+                    <div class="team__tab-content-name-text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                      dictumst faucibus tortor in.
+                    </div>
+                  </li>
+                </ul>
+                <ul class="team__tab-list-one">
+                  <li class="team__tab-list-item">
+                    <button class='team__tab-list-button ttlb1 active'>
+                      <img class='team__tab-list-img' src='images/1x1.png' data-src="images/team/1.jpg" alt="image">
+                    </button>
+                  </li>
+                  <li class="team__tab-list-item">
+                    <button class='team__tab-list-button ttlb2'>
+                      <img class='team__tab-list-img' src='images/1x1.png' data-src="images/team/2.jpg" alt="image">
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="team__tab-outer-bottom-left-right">
+                <div class="team__tab-outer-bottom-left">
+                  <ul class="team__tab-list-two">
+                    <li class="team__tab-list-item">
+                      <button class='team__tab-list-button ttlb3'>
+                        <img class='team__tab-list-img' src='images/1x1.png' data-src="images/team/3.jpg" alt="image">
+                      </button>
+                    </li>
+                    <li class="team__tab-list-item">
+                      <button class='team__tab-list-button ttlb4'>
+                        <img class='team__tab-list-img' src='images/1x1.png' data-src="images/team/4.jpg" alt="image">
+                      </button>
+                    </li>
+                  </ul>
+                  <a class="team__tab-link" href="#">ПОДРОБНЕЕ О КОМАНДЕ</a>
+                </div>
+                <div class="team__tab-outer-bottom-right">
+                  <ul class="team__tab-content-main">
+                    <li class="team__tab-content-main-item ttcmi1 active">
+                      <img class="team__tab-content-main-img" src='images/1x1.png' data-src="images/team/1.jpg"
+                        alt="image">
+                    </li>
+                    <li class="team__tab-content-main-item ttcmi2">
+                      <img class="team__tab-content-main-img" src='images/1x1.png' data-src="images/team/2.jpg"
+                        alt="image">
+                    </li>
+                    <li class="team__tab-content-main-item ttcmi3">
+                      <img class="team__tab-content-main-img" src='images/1x1.png' data-src="images/team/3.jpg"
+                        alt="image">
+                    </li>
+                    <li class="team__tab-content-main-item ttcmi4">
+                      <img class="team__tab-content-main-img" src='images/1x1.png' data-src="images/team/4.jpg"
+                        alt="image">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="team__tab-content-prof">
+                <li class="team__tab-content-prof-item ttcpi1 active">
+                  <div class="team__tab-content-prof-title">
+                    <span class="team__tab-content-prof-title-span">
+                      Шеф
+                    </span>
+                    -повар
+                  </div>
+                  <div class="team__tab-content-prof-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                    dictumst faucibus tortor in.
+                  </div>
+                </li>
+                <li class="team__tab-content-prof-item ttcpi2">
+                  <div class="team__tab-content-prof-title">
+                    <span class="team__tab-content-prof-title-span">
+                      Шеф
+                    </span>
+                    -повар2
+                  </div>
+                  <div class="team__tab-content-prof-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                    dictumst faucibus tortor in.
+                  </div>
+                </li>
+                <li class="team__tab-content-prof-item ttcpi3">
+                  <div class="team__tab-content-prof-title">
+                    <span class="team__tab-content-prof-title-span">
+                      Шеф
+                    </span>
+                    -повар3
+                  </div>
+                  <div class="team__tab-content-prof-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                    dictumst faucibus tortor in.
+                  </div>
+                </li>
+                <li class="team__tab-content-prof-item ttcpi4">
+                  <div class="team__tab-content-prof-title">
+                    <span class="team__tab-content-prof-title-span">
+                      Шеф
+                    </span>
+                    -повар4
+                  </div>
+                  <div class="team__tab-content-prof-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non lectus diam dictum semper
+                    dictumst faucibus tortor in.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='news'>
+        <div class="container">
+          <div class="news__inner">
+            <h4 class='news__title'>
+              <span class='news__title-span'>Узнайте</span>
+              СМИ О НАС
+            </h4>
+            <nav class="news__tab-outer">
+              <ul class="news__tab-list">
+                <li class="news__tab-item">
+                  <button class="news__tab-button active" data-tab="#news__tab_1">
+                    Эспертное
+                  </button>
+                </li>
+                <li class="news__tab-item">
+                  <button class="news__tab-button" data-tab="#news__tab_2">
+                    Развлечения и шоу
+                  </button>
+                </li>
+                <li class="news__tab-item">
+                  <button class="news__tab-button" data-tab="#news__tab_3">
+                    Новостное
+                  </button>
+                </li>
+              </ul>
+              <ul class='news__content'>
+                <li class="news__content-item active" id='news__tab_1'>
+                  <div class="news__slider news__slider-one swiper-container">
+                    <div class="news__slider-wrapper swiper-wrapper">
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-prev swiper-button-prev">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-prev' src='images/1x1.png'
+                        data-src="images/news/prev.svg" alt="prev">
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-next swiper-button-next">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-next' src='images/1x1.png'
+                        data-src="images/news/next.svg" alt="next">
+                    </div>
+                  </div>
+                </li>
+                <li class="news__content-item" id='news__tab_2'>
+                  <div class="news__slider news__slider-two swiper-container">
+                    <div class="news__slider-wrapper swiper-wrapper">
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-prev swiper-button-prev">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-prev' src='images/1x1.png'
+                        data-src="images/news/prev.svg" alt="prev">
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-next swiper-button-next">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-next' src='images/1x1.png'
+                        data-src="images/news/next.svg" alt="next">
+                    </div>
+                  </div>
+                </li>
+                <li class="news__content-item" id='news__tab_3'>
+                  <div class="news__slider news__slider-three swiper-container">
+                    <div class="news__slider-wrapper swiper-wrapper">
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/1.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/2.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="news__slider-slide swiper-slide">
+                        <div class="news__slider-slide-inner">
+                          <div class="news__slider-slide-card">
+                            <img class='news__slider-slide-card-img' src='images/1x1.png' data-src="images/news/3.jpg"
+                              alt="image">
+                            <div class="news__slider-slide-card-info">
+                              <div class="news__slider-slide-card-title">
+                                LOREM IPSUM
+                              </div>
+                              <div class="news__slider-slide-card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                                erat leo id ut et eleifend.
+                              </div>
+                              <a class="news__slider-slide-card-link" href='#'>
+                                Подробнее
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-prev swiper-button-prev">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-prev' src='images/1x1.png'
+                        data-src="images/news/prev.svg" alt="prev">
+                    </div>
+                    <div class="news__slider-arrow news__slider-arrow-next swiper-button-next">
+                      <img class='news__slider-arrow-img news__slider-arrow-img-next' src='images/1x1.png'
+                        data-src="images/news/next.svg" alt="next">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__inner">
+          <div class="container">
+            <h4 class="gallery__title">
+              <span class='gallery__title-span'>
+                Фото
+              </span>
+              ГАЛЕРЕЯ
+            </h4>
+            <div class="gallery__subtitle-outer">
+              <p class="gallery__subtitle">
+                ПОДПИСЫВАЙТЕСЬ НА НАШ INSTAGRAM
+              </p>
+            </div>
+            <a class="gallery__link" href="https://www.instagram.com/aurum_sochi/?hl=ru" target="_blank">
+              @aurum_sochi
+            </a>
+          </div>
+          <div class="gallery__body">
+            <div class="gallery__items">
+              <div class="gallery__column">
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/1.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/1.png" alt="image">
+                </a>
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/2.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/2.png" alt="image">
+                </a>
+              </div>
+
+              <div class="gallery__column">
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/3.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/3.png" alt="image">
+                </a>
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/4.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/4.png" alt="image">
+                </a>
+              </div>
+
+              <div class="gallery__column">
+                <div class="gallery__row">
+                  <a class="gallery__item" data-fancybox="gallery" href='images/gallery/5.png'>
+                    <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/5.png" alt="image">
+                  </a>
+                  <a class="gallery__item" data-fancybox="gallery" href='images/gallery/7.png'>
+                    <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/7.png" alt="image">
+                  </a>
+                </div>
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/6.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/6.png" alt="image">
+                </a>
+              </div>
+
+              <div class="gallery__column">
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/8.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/8.png" alt="image">
+                </a>
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/9.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/9.png" alt="image">
+                </a>
+              </div>
+
+              <div class="gallery__column">
+                <a class="gallery__item" data-fancybox="gallery" href='images/gallery/10.png'>
+                  <img class='gallery__item-img' src='images/1x1.png' data-src="images/gallery/10.png" alt="image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='social'>
+        <div class="container">
+          <div class="social__inner">
+            <h4 class="social__title">
+              <span class="social__title-span">
+                Следите
+              </span>
+              ПОДПИСЫВАЙТЕСЬ
+            </h4>
+            <div class="social__block-outer">
+              <div class="social__block">
+                <div class="social__block-title">
+                  VKONTAKTE
+                </div>
+                <div class="social__block-subtitle">
+                  Ресторан AURUM Сочи
+                </div>
+                <div class="social__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed erat leo id ut
+                  et eleifend.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                  erat leo id ut et eleifend.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus
+                  gravida neque sed erat leo id ut et eleifend.
+                </div>
+                <a class="social__block-link" href='https://vk.com/' target='_blank'>
+                  Подписаться
+                  <svg class='social__block-link-img'>
+                    <use xlink:href='#socialVk'></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="social__block">
+                <div class="social__block-title">
+                  INSTAGRAM
+                </div>
+                <div class="social__block-subtitle">
+                  Ресторан "Aurum"
+                </div>
+                <div class="social__block-img-outer">
+                  <img class="social__block-img" src='images/1x1.png' data-src="images/social/insta-images.png"
+                    alt="images">
+                  <img class="social__block-img-mobile" src="images/1x1.png"
+                    data-src='images/social/insta-images-mobile.png' alt="images">
+                </div>
+                <a class="social__block-link" href='https://instagram.com/' target='_blank'>
+                  Подписаться
+                  <svg class='social__block-link-img'>
+                    <use xlink:href='#socialInsta'></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="social__block">
+                <div class="social__block-title">
+                  YOUTUBE
+                </div>
+                <div class="social__block-subtitle">
+                  Ресторан "Aurum"
+                </div>
+                <div class="social__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed erat leo id ut
+                  et eleifend.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus gravida neque sed
+                  erat leo id ut et eleifend.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus purus
+                  gravida neque sed erat leo id ut et eleifend.
+                </div>
+                <a class="social__block-link" href='https://youtube.com/' target='_blank'>
+                  Подписаться
+                  <svg class='social__block-link-img'>
+                    <use xlink:href='#socialYt'></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="social__block">
+                <a class="social__block-video-link" href="https://www.youtube.com/" target="_blank">
+                  <img class='social__block-video-img' src='images/1x1.png' data-src="images/social/yt-banner.jpg"
+                    alt="image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__inner">
+            <h5 class="reviews__title">
+              ОТЗЫВЫ
+            </h5>
+            <p class="reviews__subtitle">
+              Наши
+              <span class='reviews__subtitle-span'>клиенты любят</span>
+              то, что
+              <span class='reviews__subtitle-span'>мы делаем</span>
+            </p>
+            <div class="reviews__slider swiper-container">
+              <div class="reviews__slider-wrapper swiper-wrapper">
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+                <div class="reviews__slider-slide swiper-slide">
+                  <div class="reviews__slider-slide-inner">
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/1.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/2.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/3.png" alt="image">
+                    </a>
+                    <a class="reviews__slider-slide-fancylink" data-fancybox href="images/video.mp4">
+                      <img class="reviews__slider-slide-fancylink-poster" src='images/1x1.png'
+                        data-src="images/reviews/4.png" alt="image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__slider-navigation">
+                <div class="reviews__slider-arrow-prev reviews__slider-arrow swiper-button-prev">
+                  <img class="reviews__slider-arrow-prev-img" src='images/1x1.png' data-src="images/reviews/prev.svg"
+                    alt="prev">
+                </div>
+                <div class="reviews__slider-arrow-next reviews__slider-arrow swiper-button-next">
+                  <img class="reviews__slider-arrow-next-img" src='images/1x1.png' data-src="images/reviews/next.svg"
+                    alt="next">
+                </div>
+                <div class="reviews__slider-pagination swiper-pagination"></div>
+              </div>
+            </div>
+            <h5 class="reviews__title">
+              <span class='reviews__title-span'>
+                Убедитесь
+              </span>
+            </h5>
+          </div>
+        </div>
+      </section>
+      <section class="reserve">
+        <div class="container">
+          <div class="reserve__inner">
+            <h5 class="reserve__title">
+              <span class="reserve__title-span">
+                Зарезервируйте
+              </span>
+              СТОЛИК
+            </h5>
+            <nav class="reserve__tab-outer">
+              <ul class="reserve__tab-list">
+                <li class="reserve__tab-item">
+                  <button class="reserve__tab-button res-btn-1 active" data-tab="#reserve__tab_1">
+                    <svg class='reserve__tab-img'>
+                      <use xlink:href='#reserveOne'></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="reserve__tab-item">
+                  <button class="reserve__tab-button res-btn-2" data-tab="#reserve__tab_2">
+                    <svg class='reserve__tab-img'>
+                      <use xlink:href='#reserveTwo'></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="reserve__tab-item">
+                  <button class="reserve__tab-button res-btn-3" data-tab="#reserve__tab_3">
+                    <svg class='reserve__tab-img'>
+                      <use xlink:href='#reserveThree'></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="reserve__tab-item">
+                  <button class="reserve__tab-button res-btn-4" data-tab="#reserve__tab_4">
+                    <svg class='reserve__tab-img'>
+                      <use xlink:href='#reserveFour'></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="reserve__tab-item">
+                  <button class="reserve__tab-button res-btn-5" data-tab="#reserve__tab_5">
+                    <svg class='reserve__tab-img'>
+                      <use xlink:href='#reserveFive'></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <div class="reserve__content-and-form">
+                <ul class="reserve__content">
+                  <li class="reserve__content-item active" id='reserve__tab_1'>
+                    <img class="reserve__content-img" src='images/1x1.png' data-src="images/reserve/1.jpg" alt="image">
+                  </li>
+                  <li class="reserve__content-item" id='reserve__tab_2'>
+                    <img class="reserve__content-img" src='images/1x1.png' data-src="images/reserve/1.jpg" alt="image">
+                  </li>
+                  <li class="reserve__content-item" id='reserve__tab_3'>
+                    <img class="reserve__content-img" src='images/1x1.png' data-src="images/reserve/1.jpg" alt="image">
+                  </li>
+                  <li class="reserve__content-item" id='reserve__tab_4'>
+                    <img class="reserve__content-img" src='images/1x1.png' data-src="images/reserve/1.jpg" alt="image">
+                  </li>
+                  <li class="reserve__content-item" id='reserve__tab_5'>
+                    <img class="reserve__content-img" src='images/1x1.png' data-src="images/reserve/1.jpg" alt="image">
+                  </li>
+                </ul>
+                <div class="reserve__form-outer">
+                  <form class="reserve__form">
+                    <div class="reserve__input-outer">
+                      <input class='reserve__input' type="text" placeholder="Имя" data-validate-field="nameTwo">
+                    </div>
+                    <div class="reserve__input-outer">
+                      <input class='reserve__input telInputTwo' type="text" placeholder="Номер телефона"
+                        data-validate-field="telTwo">
+                    </div>
+                    <div class="reserve__input-outer">
+                      <input class='reserve__input dateInputTwo' type="text" placeholder="Дата"
+                        data-validate-field="dateTwo">
+                    </div>
+                    <div class="reserve__input-outer">
+                      <input class='reserve__input timeInputTwo' type="text" placeholder="Время"
+                        data-validate-field="timeTwo">
+                    </div>
+                    <ul class="reserve__form-tab">
+                      <li class="reserve__form-tab-item reserve__form-tab_1 active">
+                        Тип стола 1
+                      </li>
+                      <li class="reserve__form-tab-item reserve__form-tab_2">
+                        Тип стола 2
+                      </li>
+                      <li class="reserve__form-tab-item reserve__form-tab_3">
+                        Тип стола 3
+                      </li>
+                      <li class="reserve__form-tab-item reserve__form-tab_4">
+                        Тип стола 4
+                      </li>
+                      <li class="reserve__form-tab-item reserve__form-tab_5">
+                        Тип стола 5
+                      </li>
+                    </ul>
+                    <button class="reserve__button">
+                      Отправить
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <h5 class="footer__title">
+            контакты
+          </h5>
+          <div class="footer__contacts-outer">
+            <div class="footer__contacts">
+              <div class="footer__contacts-block">
+                <div class="footer__contacts-block-title">
+                  Резерв столов:
+                </div>
+                <div class="footer__contacts-block-subtitle">
+                  +7 (862) 277 75 14
+                </div>
+              </div>
+              <div class="footer__contacts-block">
+                <div class="footer__contacts-block-title">
+                  Куда:
+                </div>
+                <div class="footer__contacts-block-subtitle">
+                  Сочи, морской пер. 1/1
+                </div>
+              </div>
+              <div class="footer__contacts-block">
+                <div class="footer__contacts-block-title">
+                  Время работы:
+                </div>
+                <div class="footer__contacts-block-subtitle">
+                  с 11:00 до 23:00
+                </div>
+              </div>
+              <div class="footer__contacts-block">
+                <div class="footer__contacts-block-title">
+                  Откуда:
+                </div>
+                <input class='footer__input' type="text">
+              </div>
+            </div>
+            <div class="footer__button">
+              Построить маршрут
+            </div>
+          </div>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://vk.com/" target="_blank">
+                <svg class='footer__social-link-img'>
+                  <use xlink:href='#footerVk'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.instagram.com/aurum_sochi/?hl=ru" target="_blank">
+                <svg class='footer__social-link-img'>
+                  <use xlink:href='#footerInsta'></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.youtube.com/" target="_blank">
+                <svg class='footer__social-link-img'>
+                  <use xlink:href='#footerYt'></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__map-outer">
+        <iframe class='footer__map'
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.0079865366283!2d39.7253783155626!3d43.585549979123655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f5cbd6bfa19d5b%3A0x1baa104175c38203!2sPereulok%20Gor&#39;kogo%2C%20Bolshoy%20Sochi%2C%20Krasnodarskiy%20kray%2C%20Russia%2C%20354000!5e0!3m2!1sen!2skz!4v1627533627935!5m2!1sen!2skz"
+          style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__inner footer__inner-bottom">
+            <div class="footer__logo-list">
+              <div class="footer__logo-outer">
+                <img class="footer__logo" src="images/footer/logo.svg" alt="icon">
+              </div>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a class="footer__list-link active" href="about.html">О НАС</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="gallery.html">ГАЛЕРЕЯ</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="main-menu.html">КУХНЯ</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="bar.html">БАР</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="wine.html">ВИННАЯ КАРТА</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="affiche.html">АФИША</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="contacts.html">КОНТАКТЫ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__contacts-social">
+              <div class="footer__contacts">
+                <div class="footer__contacts-block">
+                  <div class="footer__contacts-block-title">
+                    Адресс:
+                  </div>
+                  <div class="footer__contacts-block-subtitle">
+                    Сочи, морской пер. 1/1
+                  </div>
+                </div>
+                <div class="footer__contacts-block">
+                  <div class="footer__contacts-block-title">
+                    Время работы:
+                  </div>
+                  <div class="footer__contacts-block-subtitle">
+                    с 11:00 до 23:00
+                  </div>
+                </div>
+                <div class="footer__contacts-block">
+                  <div class="footer__contacts-block-title">
+                    Резерв столов:
+                  </div>
+                  <div class="footer__contacts-block-subtitle">
+                    +7 (862) 277 75 14
+                  </div>
+                </div>
+                <div class="footer__contacts-block">
+                  <div class="footer__contacts-block-title">
+                    Мы принимаем:
+                  </div>
+                  <div class="footer__contacts-block-img-outer">
+                    <img src="images/footer/cards.svg" alt="image" class="footer__contacts-block-img">
+                  </div>
+                </div>
+              </div>
+              <div class="footer__social-outer">
+                <div class="footer__social-title">
+                  <span class="footer__social-title-span">
+                    Следите
+                  </span>
+                  за нами
+                </div>
+                <ul class="footer__social">
+                  <li class="footer__social-item">
+                    <a class="footer__social-link" href="https://vk.com/" target="_blank">
+                      <svg class='footer__social-link-img'>
+                        <use xlink:href='#footerVk'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a class="footer__social-link" href="https://www.instagram.com/aurum_sochi/?hl=ru" target="_blank">
+                      <svg class='footer__social-link-img'>
+                        <use xlink:href='#footerInsta'></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="footer__social-item">
+                    <a class="footer__social-link" href="https://www.youtube.com/" target="_blank">
+                      <svg class='footer__social-link-img'>
+                        <use xlink:href='#footerYt'></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+            <div class="footer__copyright-outer">
+              <a class="footer__copyright" href="#">
+                Безопасность и правила возврата
+              </a>
+              <a class="footer__copyright" href="#">
+                Правовая информация
+              </a>
+              <a class="footer__copyright" href="#">
+                Политика конфиденциальности
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

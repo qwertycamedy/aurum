@@ -1,0 +1,78 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Moniqa', serif;
+	font-display: swap;
+	font-weight: 400;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.main {
+	flex: 1 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1710px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+	&__fixed {
+	animation-name: headerFixed;
+	animation-duration: .5s;
+	opacity: 1;
+	pointer-events: all;
+	visibility: visible;
+}}
+.menu__fixed {
+	opacity: 1;
+	pointer-events: all;
+}
+@keyframes headerFixed {
+	from {
+		transform: translate(0,-100%);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+.unFixed {
+	animation-name: headerUnFixed;
+	animation-duration: .5s;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+.menu__unfixed {
+	opacity: 0;
+	pointer-events: none;
+}
+
+@keyframes headerUnFixed {
+	from {
+		transform: translate(0,0);
+	}
+	to {
+		transform: translate(0,-100%);
+	}
+}
+
+
