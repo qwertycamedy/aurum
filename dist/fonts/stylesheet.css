@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url('9930.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gropled';
+    src: url('Gropled-Bold.woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Miama-Nueva';
+    src: url('miamanueva.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Moniqa';
+    src: url('Moniqa-Paragraph.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Crimson-Text';
+    src: url('CrimsonText-Regular.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
